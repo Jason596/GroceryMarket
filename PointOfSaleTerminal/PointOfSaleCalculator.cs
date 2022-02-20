@@ -9,41 +9,39 @@ namespace PointOfSaleTerminal
         private readonly IList<char> _productList;
         private decimal totalPrice;
 
-
         public PointOfSaleCalculator(string products)
         {
             _productList = products.ToCharArray().ToList();
         }
 
-
         public decimal CalculateTotal()
         {
             // calculate the counts
-            var groupedProduct = _productList
+            var groupedProducts = _productList
                 .GroupBy(item => item)
                 .Select(item => new
                 {
                     productCode = item.Key.ToString(),
-                    productCounts = item.Count()
+                    productCount = item.Count()
                 })
                 .ToList();
 
             // shouldn't have item has zero count
-            foreach (var product in groupedProduct)
+            foreach (var product in groupedProducts)
             {
                 switch (product.productCode)
                 {
                     case nameof(ProductCode.A):
-                        totalPrice += CalculateProductAPrice(product.productCounts);
+                        totalPrice += CalculateProductAPrice(product.productCount);
                         break;
                     case nameof(ProductCode.B):
-                        totalPrice += CalculateProductBPrice(product.productCounts);
+                        totalPrice += CalculateProductBPrice(product.productCount);
                         break;
                     case nameof(ProductCode.C):
-                        totalPrice += CalculateProductCPrice(product.productCounts);
+                        totalPrice += CalculateProductCPrice(product.productCount);
                         break;
                     case nameof(ProductCode.D):
-                        totalPrice += CalculateProductDPrice(product.productCounts);
+                        totalPrice += CalculateProductDPrice(product.productCount);
                         break;
                 }
             }
