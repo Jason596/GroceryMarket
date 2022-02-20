@@ -7,12 +7,27 @@ namespace PointOfSaleTerminal
     public class PointOfSaleCalculator
     {
         private readonly IList<char> _productList;
+        private readonly ProductPriceModelA _productPriceModelA;
+        private readonly ProductPriceModelB _productPriceModelB;
+        private readonly ProductPriceModelC _productPriceModelC;
+        private readonly ProductPriceModelD _productPriceModelD;
         private decimal totalPrice;
 
-        public PointOfSaleCalculator(string products)
+
+        public PointOfSaleCalculator(
+            string products,
+            ProductPriceModelA productPriceModelA,
+            ProductPriceModelB productPriceModelB,
+            ProductPriceModelC productPriceModelC,
+            ProductPriceModelD productPriceModelD)
         {
             _productList = products.ToCharArray().ToList();
+            _productPriceModelA = productPriceModelA;
+            _productPriceModelB = productPriceModelB;
+            _productPriceModelC = productPriceModelC;
+            _productPriceModelD = productPriceModelD;
         }
+
 
         public decimal CalculateTotal()
         {
@@ -31,19 +46,20 @@ namespace PointOfSaleTerminal
                 switch (product.productCode)
                 {
                     case nameof(ProductCode.A):
-                        totalPrice += new ProductPriceModelA().CalculateProductAPrice(product.productCount);
+                        totalPrice += _productPriceModelA.CalculateProductAPrice(product.productCount);
                         break;
                     case nameof(ProductCode.B):
-                        totalPrice += new ProductPriceModelB().CalculateProductBPrice(product.productCount);
+                        totalPrice += _productPriceModelB.CalculateProductBPrice(product.productCount);
                         break;
                     case nameof(ProductCode.C):
-                        totalPrice += new ProductPriceModelC().CalculateProductCPrice(product.productCount);
+                        totalPrice += _productPriceModelC.CalculateProductCPrice(product.productCount);
                         break;
                     case nameof(ProductCode.D):
-                        totalPrice += new ProductPriceModelD().CalculateProductDPrice(product.productCount);
+                        totalPrice += _productPriceModelD.CalculateProductDPrice(product.productCount);
                         break;
                 }
             }
+
             return totalPrice;
         }
     }
