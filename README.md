@@ -4,14 +4,16 @@ The project implements a class library for point-of-sale scanning system
 that accepts an arbitrary ordering of products, and calculating the total
 price for the products.
 
+### Getting started
+- dotnet core 3.1
+- visual studio or rider
 
 ### The solution contains 3 projects
-
 - GroceryMart (Console application for execute the class library - main entry)
 - PointOfSaleTerminal (Class library)
 - PointOfSaleTerminalTests (Tests for class library)
 
-
+---
 ### How to run the console application
 When you run console application, it will ask you few question to set up the initial price 
 for each product, e.g today's unit price, volume price and quantity for the each product. 
@@ -90,7 +92,7 @@ yes
 Please scan the product...
 ```
 
-
+---
 ### Future improvement
 
 - Better error handling 
