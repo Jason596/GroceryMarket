@@ -29,7 +29,7 @@ namespace PointOfSaleTerminal.ProductModel
                 return divided * _volumePrice;
             }
 
-            return divided * _volumePrice + remainder * _volumePrice;
+            return divided * _volumePrice + remainder * _unitPrice;
         }
     }
 }

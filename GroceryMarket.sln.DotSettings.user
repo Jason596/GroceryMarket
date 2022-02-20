@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=847b461b_002Dafa9_002D4de1_002Dac03_002D3c169bdcec78/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test_Calculate_Product_A_Price_With_Default_Value" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelATests.Test_Calculate_Product_A_Unit_Price_With_Default_Value&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelATests.Test_Calculate_Product_A_Unit_Price_With_Different_Value&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelATests.Test_Calculate_Product_A_Volume_Price_With_Default_Value&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelATests.Test_Calculate_Product_A_Volume_Price_With_Different_Value&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

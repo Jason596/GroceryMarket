@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryMarket", "GroceryMar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointOfSaleTerminal", "PointOfSaleTerminal\PointOfSaleTerminal.csproj", "{6EE89027-7B34-4581-BA4E-9EC37B9538BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointOfSaleTerminalTests", "PointOfSaleTerminalTests\PointOfSaleTerminalTests.csproj", "{4056ED53-2389-4023-B812-0B9F509320C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{6EE89027-7B34-4581-BA4E-9EC37B9538BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EE89027-7B34-4581-BA4E-9EC37B9538BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EE89027-7B34-4581-BA4E-9EC37B9538BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4056ED53-2389-4023-B812-0B9F509320C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4056ED53-2389-4023-B812-0B9F509320C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4056ED53-2389-4023-B812-0B9F509320C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4056ED53-2389-4023-B812-0B9F509320C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
