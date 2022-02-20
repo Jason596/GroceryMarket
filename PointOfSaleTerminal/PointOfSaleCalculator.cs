@@ -22,7 +22,7 @@ namespace PointOfSaleTerminal
             ProductPriceModelD productPriceModelD
         )
         {
-            _productList = products.ToCharArray().ToList();
+            _productList = products.ToUpper().ToCharArray().ToList();
             _productPriceModelA = productPriceModelA;
             _productPriceModelB = productPriceModelB;
             _productPriceModelC = productPriceModelC;

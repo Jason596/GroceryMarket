@@ -6,7 +6,7 @@ namespace PointOfSaleTerminal.ProductModel
 
         public ProductPriceModelD(decimal unitPrice)
         {
-            if (unitPrice !=0) _unitPrice = unitPrice;
+            if (unitPrice != 0) _unitPrice = unitPrice;
         }
 
 

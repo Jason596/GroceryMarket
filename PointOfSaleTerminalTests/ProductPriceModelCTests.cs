@@ -74,8 +74,8 @@ namespace PointOfSaleTerminalTests
 
         [Theory]
         [InlineData(3, 1.0, 3, 4.0, 4.0)]
-        [InlineData(4, 1.0, 3, 4.0, 5)]
-        [InlineData(5, 1.0, 3, 4.0, 6)]
+        [InlineData(4, 1.0, 3, 4.0, 5.0)]
+        [InlineData(5, 1.0, 3, 4.0, 6.0)]
         public void Test_Calculate_Product_A_Volume_Price_With_Different_Value(
             int productCounts,
             decimal unitPrice,

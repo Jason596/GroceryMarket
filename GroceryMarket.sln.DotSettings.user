@@ -5,5 +5,13 @@
     &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelATests.Test_Calculate_Product_A_Unit_Price_With_Different_Value&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelATests.Test_Calculate_Product_A_Volume_Price_With_Default_Value&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelATests.Test_Calculate_Product_A_Volume_Price_With_Different_Value&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelBTests.Test_Calculate_Product_B_Unit_Price_With_Default_Value&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelBTests.Test_Calculate_Product_B_Unit_Price_With_Deifferent_Value&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelDTests.Test_Calculate_Product_D_Unit_Price_With_Default_Value&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelDTests.Test_Calculate_Product_D_Unit_Price_With_Different_Value&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelCTests.Test_Calculate_Product_C_Unit_Price_With_Default_Value&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelCTests.Test_Calculate_Product_A_Unit_Price_With_Different_Value&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.ProductPriceModelCTests.Test_Calculate_Product_A_Volume_Price_With_Default_Value&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::4056ED53-2389-4023-B812-0B9F509320C7::.NETCoreApp,Version=v3.1::PointOfSaleTerminalTests.PointOfSaleCalculatorTests.Test_Point_Of_Sales_Calculator&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

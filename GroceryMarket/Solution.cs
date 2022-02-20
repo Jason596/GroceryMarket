@@ -61,7 +61,7 @@ namespace GroceryMarket
         {
             Console.WriteLine("\nPlease scan the product...");
             var rgx = new Regex(RgxString);
-            products = Console.ReadLine()?.ToUpper();
+            products = Console.ReadLine();
             if (string.IsNullOrWhiteSpace(products) || products.Any(char.IsDigit) || rgx.IsMatch(products))
             {
                 Console.WriteLine("Fail to scan the product, please try again.");

@@ -24,8 +24,8 @@ namespace PointOfSaleTerminalTests
         }
 
         [Theory]
-        [InlineData(1, 5.0, 5)]
-        [InlineData(2, 8.0, 16)]
+        [InlineData(1, 5.0, 5.0)]
+        [InlineData(2, 8.0, 16.0)]
         public void Test_Calculate_Product_B_Unit_Price_With_Different_Value(
             int productCounts,
             decimal unitPrice,
