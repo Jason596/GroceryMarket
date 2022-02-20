@@ -4,7 +4,6 @@ namespace PointOfSaleTerminal.ProductModel
     {
         private readonly decimal _unitPrice = 0.75m;
 
-
         public ProductPriceModelD(decimal unitPrice)
         {
             if (unitPrice !=0) _unitPrice = unitPrice;

@@ -6,7 +6,6 @@ namespace PointOfSaleTerminal.ProductModel
         private readonly int _volume  = 6;
         private readonly decimal _VolumePrice = 5.00m;
 
-
         public ProductPriceModelC(decimal unitPrice, int volume, decimal volumePrice)
         {
             if (unitPrice != 0) _unitPrice = unitPrice;

@@ -12,7 +12,6 @@ namespace PointOfSaleTerminal.ProductModel
             if (unitPrice != 0) _unitPrice = unitPrice;
             if (volume != 0) _volume = volume;
             if (volume != 0 ) _volumePrice = volumePrice;
-
         }
 
         public decimal CalculateProductAPrice(int productCounts)

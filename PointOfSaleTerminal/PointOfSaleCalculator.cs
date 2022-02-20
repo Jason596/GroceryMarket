@@ -19,7 +19,8 @@ namespace PointOfSaleTerminal
             ProductPriceModelA productPriceModelA,
             ProductPriceModelB productPriceModelB,
             ProductPriceModelC productPriceModelC,
-            ProductPriceModelD productPriceModelD)
+            ProductPriceModelD productPriceModelD
+        )
         {
             _productList = products.ToCharArray().ToList();
             _productPriceModelA = productPriceModelA;

@@ -73,12 +73,11 @@ namespace GroceryMarket
             return false;
         }
 
-
         private static (decimal, int, decimal) SetPriceForProductA()
         {
             Console.WriteLine("\nPlease enter the unit price for product A for today.");
 
-            if (!decimal.TryParse(Console.ReadLine(), out var productAUnitPrice))
+            if (!decimal.TryParse(Console.ReadLine() ?? "0.0m", out var productAUnitPrice ))
             {
                 Console.WriteLine("Please enter correct number unit price for product A.");
                 throw new Exception("Error - Something is wrong, stop processing.");
@@ -108,7 +107,7 @@ namespace GroceryMarket
         {
             Console.WriteLine("\nPlease enter the unit price for product B for today.");
 
-            if (!decimal.TryParse(Console.ReadLine(), out var productBUnitPrice))
+            if (!decimal.TryParse(Console.ReadLine() ?? "0.0m", out var productBUnitPrice))
             {
                 Console.WriteLine("Please enter correct number unit price for product B.");
                 throw new Exception("Error - Something is wrong, stop processing.");
@@ -121,7 +120,7 @@ namespace GroceryMarket
         {
             Console.WriteLine("\nPlease enter the unit price for product C for today.");
 
-            if (!decimal.TryParse(Console.ReadLine(), out var productCUnitPrice))
+            if (!decimal.TryParse(Console.ReadLine() ?? "0.0m", out var productCUnitPrice))
             {
                 Console.WriteLine("\nPlease enter correct number unit price for product C.");
                 throw new Exception("Error - Something is wrong, stop processing.");
@@ -151,7 +150,7 @@ namespace GroceryMarket
         {
             Console.WriteLine("\nPlease enter the unit price for product D for today.");
 
-            if (!decimal.TryParse(Console.ReadLine(), out var productDUnitPrice))
+            if (!decimal.TryParse(Console.ReadLine() ?? "0.0m", out var productDUnitPrice))
             {
                 Console.WriteLine("Please enter correct number unit price for product D.");
                 throw new Exception("Error - Something is wrong, stop processing.");
