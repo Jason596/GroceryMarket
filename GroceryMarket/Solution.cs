@@ -33,9 +33,14 @@ namespace GroceryMarket
                 Console.WriteLine($"The total grocery price is ${totalPrice}");
                 Console.WriteLine();
 
-                Console.WriteLine("Continue check out, please enter yes/no ");
+                Console.WriteLine("Continue check out, please enter yes/no.");
                 var stop = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(stop) && stop.ToLower() == "yes") continue;
+                if (!string.IsNullOrWhiteSpace(stop) && stop.ToLower() == "yes")
+                {
+                    Console.WriteLine();
+                    continue;
+                }
+
                 break;
             }
         }

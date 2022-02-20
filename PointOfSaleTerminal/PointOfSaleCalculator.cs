@@ -16,7 +16,7 @@ namespace PointOfSaleTerminal
 
         public decimal CalculateTotal()
         {
-            // calculate the counts
+            // calculate product count for each product
             var groupedProducts = _productList
                 .GroupBy(item => item)
                 .Select(item => new
@@ -26,78 +26,25 @@ namespace PointOfSaleTerminal
                 })
                 .ToList();
 
-            // shouldn't have item has zero count
             foreach (var product in groupedProducts)
             {
                 switch (product.productCode)
                 {
                     case nameof(ProductCode.A):
-                        totalPrice += CalculateProductAPrice(product.productCount);
+                        totalPrice += new ProductPriceModelA().CalculateProductAPrice(product.productCount);
                         break;
                     case nameof(ProductCode.B):
-                        totalPrice += CalculateProductBPrice(product.productCount);
+                        totalPrice += new ProductPriceModelB().CalculateProductBPrice(product.productCount);
                         break;
                     case nameof(ProductCode.C):
-                        totalPrice += CalculateProductCPrice(product.productCount);
+                        totalPrice += new ProductPriceModelC().CalculateProductCPrice(product.productCount);
                         break;
                     case nameof(ProductCode.D):
-                        totalPrice += CalculateProductDPrice(product.productCount);
+                        totalPrice += new ProductPriceModelD().CalculateProductDPrice(product.productCount);
                         break;
                 }
             }
-
             return totalPrice;
-        }
-
-
-        private decimal CalculateProductDPrice(int productCounts)
-        {
-            return new ProductPriceModelD().UnitPrice * productCounts;
-        }
-
-        private decimal CalculateProductCPrice(int productCounts)
-        {
-            var productPriceModelC = new ProductPriceModelC();
-
-            if (productCounts < productPriceModelC.Volume)
-            {
-                return productPriceModelC.UnitPrice * productCounts;
-            }
-
-            var divided = productCounts / productPriceModelC.Volume;
-            var remainder = productCounts % productPriceModelC.Volume;
-
-            if (remainder == 0)
-            {
-                return divided * productPriceModelC.VolumePrice;
-            }
-
-            return divided * productPriceModelC.VolumePrice + remainder * productPriceModelC.UnitPrice;
-        }
-
-        private decimal CalculateProductBPrice(int productCounts)
-        {
-            return new ProductPriceModelB().UnitPrice * productCounts;
-        }
-
-        private decimal CalculateProductAPrice(int productCounts)
-        {
-            var productPriceModelA = new ProductPriceModelA();
-
-            if (productCounts < productPriceModelA.Volume)
-            {
-                return productPriceModelA.UnitPrice * productCounts;
-            }
-
-            var divided = productCounts / productPriceModelA.Volume;
-            var remainder = productCounts % productPriceModelA.Volume;
-
-            if (remainder == 0)
-            {
-                return divided * productPriceModelA.VolumePrice;
-            }
-
-            return divided * productPriceModelA.VolumePrice + remainder * productPriceModelA.UnitPrice;
         }
     }
 }

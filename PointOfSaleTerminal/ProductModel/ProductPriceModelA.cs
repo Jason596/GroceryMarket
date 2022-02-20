@@ -2,8 +2,27 @@ namespace PointOfSaleTerminal.ProductModel
 {
     public class ProductPriceModelA
     {
-        public decimal UnitPrice { get; set; } = 1.25m;
-        public int Volume = 3;
-        public decimal VolumePrice { get; set; } = 3.00m;
+        private decimal UnitPrice { get; set; } = 1.25m;
+        private int Volume { get; set; } = 3;
+        private decimal VolumePrice { get; set; } = 3.00m;
+
+        public decimal CalculateProductAPrice(int productCounts)
+        {
+
+            if (productCounts < Volume)
+            {
+                return UnitPrice * productCounts;
+            }
+
+            var divided = productCounts / Volume;
+            var remainder = productCounts % Volume;
+
+            if (remainder == 0)
+            {
+                return divided * VolumePrice;
+            }
+
+            return divided * VolumePrice + remainder * UnitPrice;
+        }
     }
 }

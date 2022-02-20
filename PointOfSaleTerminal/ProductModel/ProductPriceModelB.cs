@@ -2,6 +2,10 @@ namespace PointOfSaleTerminal.ProductModel
 {
     public class ProductPriceModelB
     {
-        public decimal UnitPrice { get; set; } = 4.25m;
+        private decimal UnitPrice { get; set; } = 4.25m;
+        public decimal CalculateProductBPrice(int productCounts)
+        {
+            return UnitPrice * productCounts;
+        }
     }
 }
