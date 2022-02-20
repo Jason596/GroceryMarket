@@ -1,10 +1,14 @@
 using System;
+using System.Linq;
+using System.Text.RegularExpressions;
 using PointOfSaleTerminal;
 
 namespace GroceryMarket
 {
     public class Solution
     {
+        private const string RgxString = "[e-zE-Z]";
+
         public static void Main(string[] args)
         {
             while (true)
@@ -12,24 +16,26 @@ namespace GroceryMarket
                 Console.WriteLine("Starting the Grocery Market Program...");
                 Console.WriteLine("Please scan the product...");
 
-                var products = Console.ReadLine();
-                if (products == null)
+                var rgx = new Regex(RgxString);
+                var products = Console.ReadLine().ToUpper();
+                if (string.IsNullOrWhiteSpace(products) || products.Any(char.IsDigit) || rgx.IsMatch(products))
                 {
                     Console.WriteLine("Fail to scan the product, please try again.");
                     continue;
                 }
 
-                Console.WriteLine($"The product we have scanned are {products}");
-                var terminal = new PointOfSaleCalculator(products.ToUpper());
+                Console.WriteLine();
+                Console.WriteLine($"The products we have scanned are {products}");
 
+                var terminal = new PointOfSaleCalculator(products);
                 var totalPrice = terminal.CalculateTotal();
-                Console.WriteLine($"The total grocery price is {totalPrice}");
+
+                Console.WriteLine($"The total grocery price is ${totalPrice}");
                 Console.WriteLine();
 
-                Console.WriteLine("Continue check out, type YES/NO ");
+                Console.WriteLine("Continue check out, please enter yes/no ");
                 var stop = Console.ReadLine();
-                if (stop != null && stop.ToLower() == "yes") continue;
-
+                if (!string.IsNullOrWhiteSpace(stop) && stop.ToLower() == "yes") continue;
                 break;
             }
         }
