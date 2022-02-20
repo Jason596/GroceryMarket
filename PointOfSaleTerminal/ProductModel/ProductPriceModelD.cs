@@ -1,6 +1,6 @@
 namespace PointOfSaleTerminal.ProductModel
 {
-    public class ProductModelD
+    public class ProductPriceModelD
     {
         public decimal UnitPrice { get; set; } = 0.75m;
     }

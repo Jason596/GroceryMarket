@@ -1,6 +1,6 @@
 namespace PointOfSaleTerminal.ProductModel
 {
-    public enum ProductName
+    public enum ProductCode
     {
         A, B, C, D
     }
