@@ -14,9 +14,15 @@ namespace PointOfSaleTerminal.ProductModel
         }
 
 
+        /// <summary>
+        /// Calculating the product C price
+        /// </summary>
+        /// <param name="productCounts"></param>
+        /// <returns>
+        ///  Total price of product C
+        /// </returns>
         public decimal CalculateProductCPrice(int productCounts)
         {
-
             if (productCounts < _volume)
             {
                 return _unitPrice * productCounts;

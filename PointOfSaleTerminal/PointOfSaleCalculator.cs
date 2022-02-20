@@ -30,6 +30,12 @@ namespace PointOfSaleTerminal
         }
 
 
+        /// <summary>
+        /// Calculating the total price of the products
+        /// </summary>
+        /// <returns>
+        /// Total price of the products
+        /// </returns>
         public decimal CalculateTotal()
         {
             // calculate product count for each product
